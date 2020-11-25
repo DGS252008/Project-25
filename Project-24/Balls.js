@@ -4,14 +4,14 @@ class Balls{
             isStatic: true,
             restitution: 0.3,
             friction: 0.5,
-            density: 1.2,
+            density: 1.2
         }
     this.x = x;
     this.y = y;
     this.r = r;
     
     this.body = Bodies.circle(this.x, this.y, this.r/2, options);
-    this.image = loadImage("trashBall.png");
+    this.image = loadImage("paper.png");
     World.add(world, this.body);
     }
     
@@ -20,9 +20,10 @@ class Balls{
 
         push();
         translate(pos.x, pos.y);
-        rectMode(CENTER);
-        fill("white");
-        image(this.image, 0, 0, this.width, this.height);
+        imageMode(CENTER);
+        //fill("white");
+        stroke("white");
+        image(this.image, 0, 0, this.r, this.r);
         pop();
     }
 }

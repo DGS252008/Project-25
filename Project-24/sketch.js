@@ -20,7 +20,8 @@ function setup() {
 
 	//Create the Bodies Here.
 	ground = new Ground(350, 680, 1400, 10);
-	trash = new Balls(40, 670, 20);
+	trash = new Balls(40, 660, 50);
+	
 
 	bin1 = new Bin(800, 672, 100, 5);
 	bin2 = new Bin(753, 650, 5, 50);
@@ -35,7 +36,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(200, 150, 200);
   
   ground.display();
   trash.display();
